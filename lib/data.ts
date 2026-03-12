@@ -23,7 +23,7 @@ export const projects: Project[] = [
     longDescription: 'Architected and deployed an Ethereum-based P2P messaging protocol managing friendship graphs and conversation metadata fully on-chain. Reduced on-chain transaction costs by ~20% via Solidity optimizations (internal/pure/view visibility, private mappings, calldata params). Designed O(1) deterministic conversation ID generation using keccak256 hashing over lexicographically sorted address pairs. Eliminated two manual auth steps via Web3Modal session persistence and Holesky auto-switching, reducing wallet friction by ~25%.',
     tags: ['Next.js', 'React', 'Solidity', 'Hardhat', 'Ethers.js', 'Web3Modal', 'MetaMask'],
     github: 'https://github.com/MayankSharma-ops',
-    live: 'https://web3-chatapp.vercel.app',
+    live: 'https://chat-dapp-live.netlify.app/',
     featured: true,
     year: '2026',
   },
