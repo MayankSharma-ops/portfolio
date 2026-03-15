@@ -3,12 +3,15 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { achievements } from '@/lib/data';
 import { ExternalLink } from 'lucide-react';
 
-const categoryLabel: Record<string, { label: string; color: string }> = {
-  award: { label: 'Award', color: 'text-amber-400 bg-amber-400/10 border-amber-400/20' },
-  hackathon: { label: 'Hackathon', color: 'text-green-400 bg-green-400/10 border-green-400/20' },
-  publication: { label: 'Publication', color: 'text-purple-400 bg-purple-400/10 border-purple-400/20' },
-  'open-source': { label: 'Open Source', color: 'text-sky-400 bg-sky-400/10 border-sky-400/20' },
-  other: { label: 'Other', color: 'text-[#a8a29e] bg-white/5 border-white/10' },
+const categories: Record<string, { label: string; color: string }> = {
+  award:         { label: 'Award',         color: 'border-amber-500/30 text-amber-400 bg-amber-500/10' },
+  hackathon:     { label: 'Hackathon',     color: 'border-purple-500/30 text-purple-400 bg-purple-500/10' },
+  publication:   { label: 'Publication',   color: 'border-blue-500/30 text-blue-400 bg-blue-500/10' },
+  'open-source': { label: 'Open Source',   color: 'border-green-500/30 text-green-400 bg-green-500/10' },
+  project:       { label: 'Project',       color: 'border-cyan-500/30 text-cyan-400 bg-cyan-500/10' },
+  coding:        { label: 'Coding',        color: 'border-rose-500/30 text-rose-400 bg-rose-500/10' },
+  certification: { label: 'Certification', color: 'border-indigo-500/30 text-indigo-400 bg-indigo-500/10' },
+  other:         { label: 'Other',         color: 'border-[#2a2a2a] text-[#a8a29e] bg-white/5' },
 };
 
 export default function AchievementsPage() {
@@ -23,8 +26,8 @@ export default function AchievementsPage() {
 
         {/* Timeline */}
         <div className="relative pl-8 border-l border-[#2a2a2a] space-y-8">
-          {achievements.map((item, i) => {
-            const cat = categoryLabel[item.category];
+          {achievements.map((item) => {
+            const cat = categories[item.category] ?? categories['other'];
             return (
               <div key={item.id} className="relative group">
                 {/* Dot */}
@@ -77,12 +80,12 @@ export default function AchievementsPage() {
 
         {/* Summary row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-14">
-          {Object.entries(categoryLabel).filter(([k]) => k !== 'other').map(([key, { label, color }]) => {
+          {Object.entries(categories).filter(([k]) => k !== 'other').map(([key, { label, color }]) => {
             const count = achievements.filter((a) => a.category === key).length;
             if (!count) return null;
             return (
               <div key={key} className="glass-card p-4 text-center">
-                <p className={`font-display text-3xl font-bold ${color.split(' ')[0]}`}>{count}</p>
+                <p className={`font-display text-3xl font-bold ${color.split(' ')[1]}`}>{count}</p>
                 <p className="text-sm text-[#a8a29e] mt-1">{label}</p>
               </div>
             );

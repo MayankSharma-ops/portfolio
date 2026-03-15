@@ -48,7 +48,7 @@ export interface Achievement {
   description: string;
   date: string;
   icon: string;
-  category: 'award' | 'hackathon' | 'publication' | 'open-source' | 'other';
+  category: 'award' | 'hackathon' | 'publication' | 'open-source' | 'project' | 'coding' | 'certification' | 'other';
   link?: string;
 }
 

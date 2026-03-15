@@ -3,9 +3,9 @@ import { Project, Skill, Experience, Certificate, Achievement } from '@/types';
 
 export const personalInfo = {
   name: 'Mayank Sharma',
-  title: 'Full-Stack & Web3 Developer',
-  tagline: 'Building decentralized and AI-powered applications with clean, scalable code.',
-  bio: `I'm a Computer Science undergrad at LPU passionate about full-stack development, Web3, and AI. I build decentralized DApps, SaaS platforms, and REST APIs — turning complex problems into elegant, performant solutions.`,
+  title: 'Full Stack Web Developer',
+  tagline: 'Building production-grade full-stack applications with clean, scalable code.',
+  bio: `I'm a Computer Science undergrad at LPU passionate about full-stack development and AI. I build SaaS platforms, real-time applications, and REST APIs — turning complex problems into elegant, performant solutions.`,
   email: 'mayankkausishrakshak@gmail.com',
   phone: '+91-7452036672',
   location: 'Punjab, India',
@@ -18,7 +18,7 @@ export const personalInfo = {
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'ChatApp',
+    title: 'NexChat — Real-Time Chat Application',
     description: 'Production-grade full-stack real-time chat application with friend system, live messaging, and integrated video calling.',
     longDescription: 'Developed a production-grade full-stack chat application using Next.js 15, React 19, Node.js/Express, and PostgreSQL with JWT authentication, bcrypt hashing, and role-based API route protection. Engineered a RESTful backend with 15+ endpoints covering auth, friend request lifecycle, and real-time messaging, enforcing server-side friendship validation, Zod input sanitization, and rate limiting. Crafted a responsive component-driven UI with Tailwind CSS featuring emoji picker, 6-second polling-based live messaging, unread badges, and Jitsi Meet video calling via dynamic UUID-based room generation. Optimized PostgreSQL schema with UUID keys, composite indexes on message pairs and friend lookups, and deduplication constraints to minimize query overhead across high-frequency polling operations.',
     tags: ['Next.js 15', 'React 19', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'Tailwind CSS', 'JWT', 'bcrypt', 'Zod', 'Jitsi Meet'],
@@ -29,7 +29,7 @@ export const projects: Project[] = [
   },
   {
     id: '2',
-    title: 'AI Email Automation Platform',
+    title: 'AI Email Automation Platform (SaaS)',
     description: 'Full-stack SaaS for AI-driven email automation with content generation, personalization, and scheduled delivery.',
     longDescription: 'Engineered a full-stack AI-driven email automation SaaS supporting content generation, personalization, and scheduled delivery across 100+ structured test workflows. Structured REST APIs with Clerk-based JWT auth and refined PostgreSQL schemas via Prisma, cutting redundant DB queries by ~30% through indexing. Integrated OpenAI with controlled prompt logic and dynamic tone modulation, decreasing manual drafting time by ~60%. Orchestrated async job scheduling and delivery tracking via SendGrid.',
     tags: ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Prisma', 'OpenAI API', 'SendGrid', 'Clerk'],
@@ -56,7 +56,6 @@ export const skills: Skill[] = [
   { name: 'C++', level: 85, category: 'languages' },
   { name: 'Python', level: 80, category: 'languages' },
   { name: 'Java', level: 70, category: 'languages' },
-  { name: 'Solidity', level: 75, category: 'languages' },
 
   // Frontend
   { name: 'Next.js', level: 88, category: 'frontend' },
@@ -65,17 +64,23 @@ export const skills: Skill[] = [
 
   // Backend
   { name: 'Node.js', level: 85, category: 'backend' },
+  { name: 'Express.js', level: 85, category: 'backend' },
   { name: 'PostgreSQL', level: 80, category: 'backend' },
   { name: 'MongoDB', level: 75, category: 'backend' },
   { name: 'MySQL', level: 72, category: 'backend' },
   { name: 'Prisma ORM', level: 80, category: 'backend' },
 
+  // Auth & Security
+  { name: 'JWT', level: 85, category: 'backend' },
+  { name: 'bcrypt', level: 82, category: 'backend' },
+  { name: 'Zod', level: 80, category: 'backend' },
+  { name: 'Clerk', level: 78, category: 'backend' },
+
   // Tools
-  { name: 'Hardhat', level: 75, category: 'tools' },
-  { name: 'Ethers.js', level: 75, category: 'tools' },
   { name: 'Git / GitHub', level: 88, category: 'tools' },
   { name: 'Postman', level: 82, category: 'tools' },
   { name: 'VS Code', level: 95, category: 'tools' },
+  { name: 'Vercel', level: 80, category: 'tools' },
   { name: 'XAMPP', level: 70, category: 'tools' },
 ];
 
@@ -104,10 +109,10 @@ export const experiences: Experience[] = [
     endDate: 'Present',
     description: [
       'CGPA: 7.56 — pursuing a full-stack and systems-focused curriculum.',
-      'Independently built real-world projects spanning Web3, AI SaaS, and algorithm design.',
+      'Independently built production-grade projects spanning full-stack web apps, AI SaaS, and algorithm design.',
       'Solved 300+ DSA problems across LeetCode and GeeksForGeeks.',
     ],
-    technologies: ['Next.js', 'TypeScript', 'Node.js', 'Solidity', 'PostgreSQL'],
+    technologies: ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Prisma'],
     type: 'education',
   },
   {
@@ -208,7 +213,7 @@ export const achievements: Achievement[] = [
     description: 'Sharpened problem-solving and algorithmic thinking by consistently solving challenges on LeetCode and GeeksForGeeks.',
     date: 'Feb 2026',
     icon: '🧠',
-    category: 'other',
+    category: 'coding',
     link: 'https://leetcode.com',
   },
   {
@@ -231,12 +236,12 @@ export const achievements: Achievement[] = [
   },
   {
     id: '4',
-    title: 'Deployed Web3 ChatApp on Ethereum Holesky',
-    description: 'Successfully architected and deployed a fully on-chain decentralized messaging DApp with gas optimizations on the Ethereum Holesky testnet.',
+    title: 'Launched NexChat — Real-Time Chat Platform',
+    description: 'Independently engineered and deployed a production-grade full-stack chat application with JWT auth, 15+ REST API endpoints, polling-based live messaging, and Jitsi Meet video calling.',
     date: 'Feb 2026',
-    icon: '🔗',
-    category: 'open-source',
-    link: 'https://github.com/MayankSharma-ops',
+    icon: '💬',
+    category: 'project',
+    link: 'https://github.com/MayankSharma-ops/ChatApp',
   },
   {
     id: '5',
@@ -244,7 +249,7 @@ export const achievements: Achievement[] = [
     description: 'Independently engineered and shipped a full-stack AI-driven email automation SaaS platform handling 100+ structured test workflows.',
     date: 'Jan 2026',
     icon: '🚀',
-    category: 'other',
-    link: 'https://github.com/MayankSharma-ops',
+    category: 'project',
+    link: 'https://github.com/MayankSharma-ops/AIEmail-SaaS',
   },
 ];

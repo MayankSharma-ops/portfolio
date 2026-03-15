@@ -79,10 +79,10 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-6 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: '2+', label: 'Projects Shipped' },
+              { value: '4+', label: 'Projects Shipped' },
               { value: '300+', label: 'DSA Problems Solved' },
               { value: '5★', label: 'HackerRank C++ & Python' },
-              { value: '6', label: 'Certifications' },
+              { value: '8', label: 'Certifications' },
             ].map(({ value, label }) => (
               <div key={label} className="text-center">
                 <p className="font-display text-3xl font-bold text-amber-400">{value}</p>
