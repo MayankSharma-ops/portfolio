@@ -3,13 +3,13 @@ import { personalInfo } from '@/lib/data';
 import { MapPin, Mail, Phone, Github, Linkedin, Download, CheckCircle2 } from 'lucide-react';
 
 const values = [
-  { icon: '⚡', title: 'Performance First', description: 'I obsess over gas costs in Solidity, query efficiency in PostgreSQL, and bundle sizes in Next.js.' },
-  { icon: '🔗', title: 'Web3 Native', description: 'Building fully on-chain systems without centralized infrastructure — trustless and transparent by design.' },
-  { icon: '🤖', title: 'AI-Augmented', description: 'Integrating LLMs with controlled prompt logic and structured outputs to build genuinely useful AI features.' },
-  { icon: '🤝', title: 'Clean Code', description: 'Readable, typed, and well-structured code that the next developer (or future me) can understand immediately.' },
+  { icon: '⚡', title: 'Performance First', description: 'I obsess over query efficiency in PostgreSQL, API response times, and bundle sizes in Next.js for production-grade applications.' },
+  { icon: '🏗️', title: 'Scalable Architecture', description: 'Designing normalized schemas, indexed queries, and RESTful APIs that hold up under real-world load and high-frequency operations.' },
+  { icon: '🤖', title: 'AI-Augmented', description: 'Integrating LLMs with controlled prompt logic and structured outputs to build genuinely useful, production-ready AI features.' },
+  { icon: '🤝', title: 'Clean Code', description: 'Readable, typed, and well-structured code that the next developer (or future me) can understand and maintain immediately.' },
 ];
 
-const interests = ['Web3 / DApps', 'AI & LLMs', 'DSA & Problem Solving', 'Open Source', 'Next.js', 'Solidity', 'System Design', 'Chess'];
+const interests = ['Full Stack Development', 'AI & LLMs', 'DSA & Problem Solving', 'REST API Design', 'Next.js', 'PostgreSQL', 'System Design', 'Chess'];
 
 export default function AboutPage() {
   return (
@@ -18,7 +18,7 @@ export default function AboutPage() {
         <PageHeader
           label="// about me"
           title="Who I Am"
-          description="A developer driven by curiosity, precision, and the craft of building great software."
+          description="A full-stack developer driven by curiosity, precision, and the craft of building great software."
         />
 
         <div className="grid md:grid-cols-5 gap-12 items-start">
@@ -31,7 +31,7 @@ export default function AboutPage() {
                   <div className="font-display text-6xl font-bold text-amber-400 mb-2">
                     MS
                   </div>
-                  <p className="text-[#57534e] font-mono text-xs">{personalInfo.title}</p>
+                  <p className="text-[#57534e] font-mono text-xs">Full Stack Web Developer</p>
                 </div>
               </div>
             </div>
@@ -61,8 +61,8 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <a
-              href={personalInfo.resumeUrl}
+            
+              <a href={personalInfo.resumeUrl}
               download="MayankSharma_CV.pdf"
               className="btn-primary w-full justify-center flex items-center gap-2"
             >
@@ -73,7 +73,7 @@ export default function AboutPage() {
               <CheckCircle2 size={16} className="text-green-400 shrink-0" />
               <div>
                 <p className="text-sm font-medium text-[#f5f0e8]">Open to Work</p>
-                <p className="text-xs text-[#57534e]">Full-time & internship roles</p>
+                <p className="text-xs text-[#57534e]">Full Stack Web Developer Internship</p>
               </div>
             </div>
           </div>
@@ -84,10 +84,10 @@ export default function AboutPage() {
               <h2 className="font-display text-2xl font-bold mb-5">The Story</h2>
               <div className="space-y-4 text-[#a8a29e] leading-relaxed">
                 <p>
-                  I&apos;m a Computer Science undergrad at <span className="text-amber-400">Lovely Professional University</span>, building at the intersection of full-stack web development, Web3, and AI.
+                  I&apos;m a Computer Science undergrad at <span className="text-amber-400">Lovely Professional University</span>, building production-grade full-stack web applications using modern technologies like Next.js, Node.js, and PostgreSQL.
                 </p>
                 <p>
-                  I built a fully on-chain <span className="text-amber-400">decentralized messaging DApp</span> on Ethereum — no backend, no centralized server, just smart contracts and a Next.js frontend. I obsessed over gas optimization, deterministic conversation IDs with keccak256, and wallet UX.
+                  I built <span className="text-amber-400">NexChat</span> — a production-grade real-time chat platform with a friend system, JWT-secured REST API with 15+ endpoints, polling-based live messaging, and Jitsi Meet video calling. Every layer — from PostgreSQL schema design to frontend UI — was engineered from scratch.
                 </p>
                 <p>
                   I also independently engineered an <span className="text-amber-400">AI Email Automation SaaS</span> — integrating OpenAI, SendGrid, Clerk auth, and PostgreSQL with Prisma. That experience sharpened my understanding of full-stack architecture, async job queues, and production-grade API design.
